@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senin İçin Aşkım ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts ekleyelim -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&amp;display=swap" rel="stylesheet">
+<style type="text/css" id="dcoder_stylesheet">body {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Aşağı kaydırılabilir yap */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+/* Şiir kısmı */
+.poem {
+    margin-top: 50px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: #8B0000;  /* Koyu kırmızı */
+    line-height: 1.6;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: inline-block;
+    max-width: 90%;
+}
+
+/* Kalp animasyonu */
+@keyframes float {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+.heart {
+    position: absolute;
+    color: pink;
+    font-size: 20px;
+    animation: float 5s linear infinite;
+}</style></head>
+<body>
+    <div class="container">
+        <h1>Canım Sevgilim ❤️</h1>
+        <p>Sen hayatımın en güzel parçasısın. İyi ki doğdun, iyi ki varsın! Seni sonsuz seviyorum. 💖</p>
+
+        <!-- Şiir kısmı -->
+        <div class="poem">
+            <p>Zannetme ki seni unutcağımı</p>
+            <p>Emin ol hep taşırım aşkımızı</p>
+            <p>Yıllar geçse gene seni severim</p>
+            <p>Ne uslanırım nede bırakırım</p>
+            <p>Efsunlar beni bakışların</p>
+            <p>Pattes kafalıyım bazen bilirim</p>
+            <p>                </p>
+            <p>Seni çok özlerim</p>
+            <p>En değerlim herşeyim</p>
+            <p>Nolur hatamı affet... Bilirim zor</p>
+            <p>İnan ki istemeden kırdım seni</p>
+            <p>                             </p>
+            <p>Seni bilerek üzmektense kendimi üzerim</p>
+            <p>En değerlimsin sen benim herşeyim</p>
+            <p>Ve bitmez bu sana olan sevdam</p>
+            <p>İnan ki benim elimden bu geliyor...</p>
+            <p>Yüzünü asmanı istemem gülmek yakışır sana</p>
+            <p>O gözlerin parlar aniden bana</p>
+            <p>Ramazan ayı çarptı bana</p>
+            <p>Uzatmadan söylim</p>
+            <p>Meraklıysan son cümleye bak baş harflere</p>
+        </div>
+    </div>
+
+    <audio id="mymusic" autoplay loop>
+        <source src="music.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+
+<script type="text/javascript" id="dcoder_script">// Kalplerin ekranda uçuşmasını sağla
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
+}
+
+setInterval(createHeart, 500);
+
+// Müzik otomatik başlasın
+document.addEventListener("DOMContentLoaded", function () {
+    let audio = document.getElementById("mymusic");
+    audio.play().catch(() => {
+        console.log("Müzik otomatik başlamadı, kullanıcı etkileşimi gerekiyor.");
+    });
+});</script></body></html>
